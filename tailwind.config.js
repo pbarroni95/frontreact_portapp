@@ -15,6 +15,9 @@ export default {
       'divs': '#1f2124',
 
       },
+      maxWidth: {
+        '32rem': '32rem', // Personalizado para 32 rem
+      },
     },
   },
   plugins: [],

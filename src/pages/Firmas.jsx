@@ -111,9 +111,9 @@ const Firmas = () => {
       <div className="text-center mb-4 p-2">
       </div>
 
-      <div className="flex flex-wrap -mx-4 flex-1">
+      <div className="flex flex-wrap -mx-8 flex-1">
         <div className="w-full md:w-1/5 px-4 mb-4 md:mb-0">
-          <div className="h-full bg-divs px-3 pt-8 pb-8 rounded-lg overflow-hidden text-center relative">
+          <div className="h-full bg-divs px-1 pt-8 pb-8 rounded-lg overflow-hidden text-center relative">
             <div className="space-y-4">
               {currentDocument && (
                 <>
@@ -138,24 +138,24 @@ const Firmas = () => {
           </div>
         </div>
 
-        <div className="flex flex-wrap w-full md:w-4/5 px-4">
-          <div className="w-full md:w-1/2 mb-4 md:mb-0 px-4">
-            <div className="h-full bg-divs px-8 pt-9 pb-5 rounded-lg overflow-hidden">
+        <div className="flex flex-wrap w-full md:w-4/5 px-1">
+          <div className="w-full md:w-1/2 mb-4 md:mb-0 px-1">
+            <div className="h-full bg-divs px-2 pt-9 pb-5 rounded-lg overflow-hidden">
+              <ButtonFirmas prevDocument={prevDocument} nextDocument={nextDocument} />
               <div className="flex flex-col items-center space-y-4">
-                <ButtonFirmas prevDocument={prevDocument} nextDocument={nextDocument} />
+
                 <div className="flex justify-center">
-                  <div className="space-y-4">
-                    {currentDocument && (
-                      <>
-                        <div className="max-w-sm rounded overflow-hidden shadow-lg my-2 -background">
-                          <img id="frontimage" src={currentDocument.link_frente} alt="Document Front" className="w-full" />
-                        </div>
-                      </>
-                    )}
+                  <div className="auto rounded overflow-hidden shadow-lg my-2 -background">
+                    <div className="max-h-96 overflow-y-auto">
+                      {currentDocument && (
+                        <img id="frontimage" src={currentDocument.link_frente} alt="Document Front" className="w-full" />
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+
           </div>
 
           <div className="w-full md:w-1/2 px-4">
