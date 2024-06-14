@@ -2,11 +2,17 @@ import React from 'react';
 import ButtonGeneric from './ButtonGeneric';
 import Qgat from './Qgat';
 import UltFechaHistorialGAT from './UltFechaHistorialGAT';
+import ModalHome from './ModalHome';
+import PortinClaro from './PortinClaro';
+import PortinMovi from './PortinMovi';
+import DniClaro from './DniClaro';
+import DniMovi from './DniMovi';
 
+{/*Botón "modal" tutorial sobre cada Card.*/} 
 
 const Cards = () => {
   const cantidad = "cantidad";
-  const ultFechaHistorialGAT = "ultFechaHistorialGAT";
+  const ultfechahistorialGAT = "ultFechaHistorialGAT";
   const mensajePostFirmas = "mensajePostFirmas";
   const portinClaro = "portinClaro";
   const dniClaro = "dniClaro";
@@ -84,17 +90,22 @@ const Cards = () => {
   };
 
   return (
-    <section className="text-white-600 body-font">
-      <div className="container px-5 py-24 mx-auto">
-        <div className="flex flex-wrap -m-4">
-        <div className="p-4 lg:w-1/3">
-            <div className="h-60 px-6 pt-9 pb-24 rounded-lg overflow-hidden text-center relative bg-accent hover:border-2 hover:border-primary hover:bg-background transition-colors">
-              <h2 className="tracking-widest text-xs title-font font-medium text-white mb-1">PASO 1</h2>
+    <section className="text-white-600 body-font ml-44 mr-44">
+      <div className="container mx-auto px-4 py-6 items-center">
+        <div className="grid grid-cols-2 gap-4 items-center">
+        <div className="col-span-1 flex flex-col gap-4 p-4">
+
+            <div className="h-60 px-6 pt-6 pb-24 rounded-custom1 overflow-hidden text-center relative bg-accent hover:border-2 hover:border-primary hover:bg-background transition-colors border-2 border-accent">
+            <div className='flex flex-col ml-2 '>
+              <ModalHome />
+              </div>
+              <h2 className="tracking-widest text-xs title-font font-medium text-white mb-4 ">PASO 1
+              </h2>
               <h5 className="title-font sm:text-2xl text-xl text-white mb-3 font-bold">
                 Q GAT < Qgat />
               </h5>
               <div id="mensajeGat"></div>
-              <ButtonGeneric onClick={confirmarYActualizarGAT}>
+              <ButtonGeneric onClick={confirmarYActualizarGAT} className="mb-3">
                 ACTUALIZAR
               </ButtonGeneric>
               <h2 className="tracking-widest text-xs title-font font-medium text-white mt-3">
@@ -103,50 +114,79 @@ const Cards = () => {
             </div>
           </div>
 
-          <div className="p-4 lg:w-1/3">
-            <div className="h-60 px-6 pt-9 pb-24 rounded-lg overflow-hidden text-center relative bg-accent hover:border-2 hover:border-primary hover:bg-background transition-colors">
-              <h2 className="tracking-widest text-xs title-font font-medium text-white mb-1">PASO 2</h2>
+
+          <div className="p-2">
+            <div className="h-60 px-6 pt-6 pb-24 rounded-custom1 overflow-hidden text-center relative bg-accent hover:border-2 hover:border-primary hover:bg-background transition-colors border-2 border-accent">
+            <div className='flex flex-col ml-2 '>
+              <ModalHome />
+              </div>
+              <h2 className="tracking-widest text-xs title-font font-medium text-white mb-4">PASO 2</h2>
               <h5 className="title-font sm:text-2xl text-xl text-white mb-3 font-bold">
                 PREPARATIVOS PRE PNM
               </h5>
-              <div id="mensajePrePnm">
-              <span id="mensajePostFirmas">{mensajePostFirmas}</span>
-              </div>
-              <ButtonGeneric onClick={confirmarYActualizarDosSemanas}>
+              <ButtonGeneric onClick={confirmarYActualizarDosSemanas} className="mb-4">
                 ACTUALIZAR
               </ButtonGeneric>
+              <div id="mensajePrePnm">
+              <span id="mensajePostFirmas" className="tracking-widest text-xs title-font font-medium text-white mt-6">{mensajePostFirmas}</span>
+              </div>
             </div>
           </div>
+         
 
-          <div className="p-4 lg:w-1/3">
-            <div className="h-61 px-6 pt-9 pb-24 rounded-lg overflow-hidden text-center relative bg-accent hover:border-2 hover:border-primary hover:bg-background transition-colors">
-              <h2 className="tracking-widest text-xs title-font font-medium text-white mb-1">PASO 3</h2>
-              <h5 className="title-font sm:text-2xl text-xl text-white mb-3 font-bold">
+          <div className="col-span-1 rounded-lg p-2">
+            <div className="h-94 px-6 pt-6  pb-19 rounded-custom1 overflow-hidden text-center relative bg-accent hover:border-2 hover:border-primary hover:bg-background transition-colors border-2 border-accent">
+            <div className='flex flex-col ml-2 '>
+              <ModalHome />
+              </div>
+              <h2 className="tracking-widest text-xs title-font font-medium text-white mb-4">PASO 3 - CLARO</h2>
+              <h5 className="title-font sm:text-2xl text-xl text-white mb-3 font-bold mt-4">
                 GENERACION PNM
               </h5>
-              <div className="botones-form">
+              <div className="botones-form mt-6 mb-8">
                 <ButtonGeneric onClick={confirmarYgenerarPdfs}>
                   GENERAR PNMs
                 </ButtonGeneric>
               </div>
-              <div className="column-container" style={{ marginTop: '20px' }}>
-                <h5 style={{ fontSize: '12px' }}>PORTIN CLARO <span id="portinClaro">{portinClaro}</span></h5>
-                <h5 style={{ fontSize: '12px' }}>DNI CLARO <span id="dniClaro">{dniClaro}</span></h5>
-                <h5 style={{ fontSize: '12px' }}>PORTIN MOVI <span id="portinMovi">{portinMovi}</span></h5>
-                <h5 style={{ fontSize: '12px' }}>DNI MOVI <span id="dniMovi">{dniMovi}</span></h5>
+              <div className="flex items-center space-x-10 justify-center pb-4">
+                <h5><PortinClaro /></h5>
+                <h5><DniClaro /></h5>
               </div>
-              <div className="column-container">
-                <ButtonGeneric onClick={confirmarYsubirPdfsMovi}>
-                  SUBIR MOVI
-                </ButtonGeneric>
-                <ButtonGeneric onClick={moverSubidaAMovi} className="icon-button">
-                  <i className="fa-solid fa-clock-rotate-left" style={{ color: 'yellow' }}></i>
-                </ButtonGeneric>
-                <ButtonGeneric onClick={confirmarYsubirPdfsClaro}>
+              <div className="flex items-center justify-center space-x-4">
+                <ButtonGeneric onClick={confirmarYsubirPdfsClaro} className="text-sm mb-4 border border-1">
                   SUBIR CLARO
                 </ButtonGeneric>
-                <ButtonGeneric onClick={moverSubidaAClaro} className="icon-button">
-                  <i className="fa-solid fa-clock-rotate-left" style={{ color: 'yellow' }}></i>
+                <ButtonGeneric onClick={moverSubidaAClaro} className="icon-button text-sm mb-4 border border-1">
+                  Mover subida Claro
+                </ButtonGeneric>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-span-1 rounded-lg p-2">
+            <div className="h-94 px-6 pt-6  pb-19 rounded-custom1 overflow-hidden text-center relative bg-accent hover:border-2 hover:border-primary hover:bg-background transition-colors border-2 border-accent">
+            <div className='flex flex-col ml-2 '>
+              <ModalHome />
+              </div>
+              <h2 className="tracking-widest text-xs title-font font-medium text-white mb-4">PASO 3 - MOVISTAR</h2>
+              <h5 className="title-font sm:text-2xl text-xl text-white mb-3 font-bold mt-4">
+                GENERACION PNM
+              </h5>
+              <div className="botones-form mt-6 mb-8">
+                <ButtonGeneric onClick={confirmarYgenerarPdfs}>
+                  GENERAR PNMs
+                </ButtonGeneric>
+              </div>
+            <div className="flex  items-center space-x-10 justify-center pb-4">
+            <h5><PortinMovi /></h5>
+              <h5><DniMovi /></h5>
+              </div>
+              <div className="flex  items-center space-x-4 justify-center">
+                <ButtonGeneric onClick={confirmarYsubirPdfsMovi} className="text-sm mb-4 border border-1">
+                  SUBIR MOVI
+                </ButtonGeneric>
+                <ButtonGeneric onClick={moverSubidaAMovi} className="icon-button mb-4 text-sm border border-1">
+                 Mover subida Movistar
                 </ButtonGeneric>
               </div>
             </div>

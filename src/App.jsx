@@ -2,7 +2,9 @@ import {Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Firmas from './pages/Firmas';
 import Header from './components/Header';
-import Footer from './components/Footer';
+import AdminApp from './pages/AdminApp';
+import Busqueda from './pages/Busqueda';
+
 import '@fortawesome/fontawesome-free/css/all.css';
 
 function App() {
@@ -13,8 +15,9 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/firmas' element={<Firmas />} />
+          <Route path='/adminapp' element={<AdminApp />} />
+          <Route path='/busqueda' element={<Busqueda />} />
           </Routes>
-        <Footer />
       </div>
   
   );
