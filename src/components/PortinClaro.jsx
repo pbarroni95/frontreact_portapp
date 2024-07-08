@@ -22,7 +22,7 @@ function PortinClaro() {
 
     return (
         <div>
-            <h5 >Portin CLARO: <span id="portinClaro">{portinClaro}</span></h5>
+            <h5 >Portin CLARO: <span id="portinClaro" className='text-primary'>{portinClaro}</span></h5>
             
         </div>
     );

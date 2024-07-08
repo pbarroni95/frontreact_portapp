@@ -13,7 +13,7 @@ import { LuMenuSquare } from 'react-icons/lu'
 
 {
   isopen && (
-    <div className='fixed inset-4 bg-black bg-opacity-30 flex justify-end items-center mr-14  z-50 '>
+    <div className='fixed inset-4 bg-black bg-opacity-30 flex justify-center items-center mr-14  z-50 '>
    <div className='bg-white p-4  flex flex-col justify-center items-center gap-2 rounded-custom1 w-96 h-72'>
     <div>
     

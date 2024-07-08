@@ -15,6 +15,7 @@ export default {
         'accent': '#1c1c1c',
         'divs': '#1f2124',
         'submenu': '#707B7C',
+        'atributo': '#3f3f46',
       },
       maxWidth: {
         '32rem': '32rem', // Personalizado para 32 rem

@@ -18,8 +18,10 @@ return (
       <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
         <Link to="/" className="mr-5  hover:text-primary cursor-pointer font-bold">Home</Link>
         <Link to="adminapp" className="mr-5 hover:text-primary cursor-pointer font-bold">AdminApp</Link>
-        <Link to="busqueda" className="mr-5 hover:text-primary cursor-pointer font-bold">Búsqueda</Link>     
+        <Link to="busqueda" className="mr-5 hover:text-primary cursor-pointer font-bold">Búsqueda</Link>
         <Link to="firmas" className="mr-5 hover:text-primary cursor-pointer font-bold">Firmas</Link>
+       
+           
       </nav>
 
       <div className="flex items-center mr-24">
