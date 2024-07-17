@@ -102,6 +102,8 @@ const Firmas = () => {
     }
     finally {
       clearCanvas();
+      nextDocument();
+
     }
   };
 
